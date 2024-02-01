@@ -11,7 +11,7 @@ const familyGuyImage = 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/
     <div>
         <ShowItem :thumbnail="friendsImage" show="Friends"/>
         <ShowItem :thumbnail="officeImage" show="Office"/>
-        <ShowItem :thumbnail="familyGuyImage" show="Family Guy"/>
+        <ShowItem :thumbnail="familyGuyImage" show="FamilyGuy"/>
     </div>
 </template>
 

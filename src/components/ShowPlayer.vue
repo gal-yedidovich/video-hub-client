@@ -129,9 +129,7 @@ onUnmounted(() => {
 				autofocus
 				controls
 				@ended="requestNextEpisode">
-				<source
-					:src="`${BASE_URL}/api/episode/${show}/s${currentEpisode.season}/e${currentEpisode.episode}`"
-					type="video/mp4"/>
+				<source :src="`${BASE_URL}/api/episode/${show}/s${currentEpisode.season}/e${currentEpisode.episode}`"/>
 			</video>
 		</div>
 
