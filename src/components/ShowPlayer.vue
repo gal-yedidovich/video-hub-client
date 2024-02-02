@@ -57,6 +57,9 @@ async function requestNextEpisode(): Promise<void> {
 function saveCurrentEpisodeTime(episode: EpisodeTime) {
 	fetch(`${BASE_URL}/api/currentEpisode`, {
 		method: 'PUT',
+		headers: {
+			'Content-Type': 'application/json',
+		},
 		body: JSON.stringify({
 			show: props.show,
 			season: episode.season,
@@ -104,8 +107,7 @@ function startSavingProgress() {
 		const { season, episode } = currentEpisode.value
 		const time = videoPlayer.value!.currentTime
 		console.log('saving progress', { season, episode, time })
-		console.log('requesting to save episode', { season: Number(season), episode: Number(episode), time })
-		saveCurrentEpisodeTime({ season: Number(season), episode: Number(episode), time })
+		saveCurrentEpisodeTime({ season, episode, time })
 	}, 5000)
 }
 

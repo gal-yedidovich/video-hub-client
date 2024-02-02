@@ -1,6 +1,5 @@
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
@@ -13,5 +12,8 @@ export default defineConfig({
 	},
 	server: {
 		cors: { origin: '*' },
+	},
+	define: {
+		__VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
 	},
 })
