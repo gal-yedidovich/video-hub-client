@@ -7,7 +7,7 @@ import { useDebounceFn, useEventListener } from '@vueuse/core'
 type Episode = { episode: number, season: number }
 type EpisodeTime = Episode & { time: number }
 
-const BASE_URL = 'http://192.168.1.236:3000'
+const BASE_URL = import.meta.env.VITE_SERVER_URL
 
 const props = defineProps<{ show: Show }>()
 const router = useRouter()
