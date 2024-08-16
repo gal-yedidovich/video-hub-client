@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import ShowPlayer from '@/components/ShowPlayer.vue'
+import type { Show } from '@/types/episodes'
 
-defineProps<{ show: string }>()
+defineProps<{ show: Show }>()
 </script>
 
 <template>
