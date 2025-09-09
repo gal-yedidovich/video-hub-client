@@ -26,6 +26,8 @@ const hideOverlayDebounced = useDebounceFn(() => {
 useEventListener(document, 'keydown', event => {
 	if (event.key === '39' && event.metaKey) {
 		requestNextEpisode()
+	} else if (event.key === 'f') {
+		videoPlayer.value?.requestFullscreen()
 	}
 })
 
